@@ -4,14 +4,14 @@ import Content from "@/app/components/content/page";
 
 const Introduction = () => {
     return (
-        <div>
+        <div className="h-dvh flex flex-col justify-center items-center ">
             <section>
                 <Content />
             </section>
             <section>
                 <Icons />
             </section>
-            <section>
+            <section className="absolute bottom-20">
                 <Button />
             </section>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Stack from '@/app/components/stack/page';
 
 const About = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -32,9 +33,10 @@ const About = () => {
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1 }}
         >
-            <div className='bg-white'>
+            <div className='bg-gray-100 p-5'>
                 <div>
-                    <h1 className='text-center text-5xl md:text-5xl lg:text-5xl font-bold mb-4'>About Me</h1>
+                <div>
+                    <h1 className='text-red-600 text-center text-5xl md:text-5xl lg:text-5xl font-bold mb-4'>About Me</h1>
                 </div>
                 <div>
                     <p>
@@ -43,6 +45,11 @@ const About = () => {
                     <p>
                         I’m expanding my skills with modern frameworks like Next.js and state management tools such as Redux. I focus on writing clean, efficient code while keeping up with the latest industry trends, ensuring I can deliver innovative and high-quality solutions for every project.
                     </p>
+                </div>
+                
+                </div>
+                <div>
+                    <Stack />
                 </div>
             </div>
         </motion.div>

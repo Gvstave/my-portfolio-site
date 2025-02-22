@@ -1,44 +1,12 @@
 "use client";
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+
 import Stack from '@/app/components/stack/page';
 
 const About = () => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                if (entries[0].isIntersecting) {
-                    setIsVisible(true);
-                } else {
-                    setIsVisible(false);
-                }
-            },
-            { threshold: 0.5 }
-        );
-
-        const element = document.getElementById('scroll-element');
-        if (element) observer.observe(element);
-
-        return () => {
-            if (element) observer.unobserve(element);
-        };
-    }, []);
-
     return (
-        <motion.div
-            id="scroll-element"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isVisible ? 1 : 0 }}
-            transition={{ duration: 1 }}
-        >
-            <div className='bg-gray-100 p-5'>
-                <div>
-                <div>
-                    <h1 className='text-red-600 text-center text-5xl md:text-5xl lg:text-5xl font-bold mb-4'>About Me</h1>
-                </div>
-                <div>
+            <div className='bg-gray-100 px-5 py-20 h-full'>
+                <div className='flex flex-col gap-4'>
+                    <h1 className='text-center text-5xl md:text-5xl lg:text-5xl font-bold mb-4'>About Me</h1>
                     <p>
                         As an aspiring full-stack web developer, I am passionate about creating dynamic and scalable web applications. With a solid foundation in MongoDB, Express.js, React, and Node.js, I am eager to build full-stack solutions that provide seamless user experiences and robust functionality. I am constantly learning and growing in my journey to deliver exceptional web applications.
                     </p>
@@ -46,13 +14,10 @@ const About = () => {
                         I’m expanding my skills with modern frameworks like Next.js and state management tools such as Redux. I focus on writing clean, efficient code while keeping up with the latest industry trends, ensuring I can deliver innovative and high-quality solutions for every project.
                     </p>
                 </div>
-                
-                </div>
                 <div>
                     <Stack />
                 </div>
             </div>
-        </motion.div>
     );
 };
 

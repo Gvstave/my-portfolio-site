@@ -1,4 +1,4 @@
-import { Server, Database, Code, Frame, GitBranch, Globe, PanelsTopLeft } from "lucide-react";
+import { Server, Database, Code, Smartphone, GitBranch, Globe, PanelsTopLeft } from "lucide-react";
 import React from "react";
 
 interface ItemProps {
@@ -10,18 +10,18 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ image, title, techStack, note }) => {
     return (
-        <div className='bg-white mt-10 p-5 rounded-full'>
+        <div className='bg-white mt-10 p-5 rounded flex flex-col gap-4'>
             <div className="flex items-center justify-left gap-4">
-                <div>
-                    <span className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg">{image}</span>
+                <div className="block p-2 rounded-full bg-white shadow-md">
+                    <span className="dark:bg-gray-800 shadow-lg">{image}</span>
                 </div>
                 <div>
-                    <h4 className="font-bold">{title}</h4>
-                    <p className="text-xs">{techStack}</p>
+                    <h2 className="font-bold">{title}</h2>
+                    <p className="text-xs text-gray-700">{techStack}</p>
                 </div>
             </div>
             <div>
-                <p>{note}</p>
+                <p className="text-gray-700">{note}</p>
             </div>
         </div>
     );
@@ -31,45 +31,45 @@ const Stack = () => {
     return (
         <div>
             <Item
-                image={<Code className="text-green-900 w-6 h-6"/>}
+                image={<Code className="text-blue-500 w-6 h-6"/>}
                 title="Languages"
                 techStack="HTML, Javascript, Typescript, C, Java"
-                note=""
+                note="Building proficient, maintainable, and flexible systems through a diverse set of languages. Emphasizing on type-safety, and ensuring systems are secure and scalable through well-structured code."
             />
             <Item
-                image={<Frame />}
+                image={<PanelsTopLeft className="text-yellow-500 w-6 h-6"/>}
                 title="Frontend"
                 techStack="React, NextJS/TS"
                 note="Building responsive and interactive user interfaces with modern React features and Next.js for optimal performance."
             />
             <Item
-                image={<Server />}
+                image={<Server  className="text-green-500 w-6 h-6" />}
                 title="Backend"
                 techStack="Node.js, Express"
-                note="Building responsive and interactive user interfaces with modern React features and Next.js for optimal performance."
+                note="Creating robust server-side applications with focus on scalability and clean architecture."
             />
             <Item
-                image={<Database />}
+                image={<Database  className="text-purple-500 w-6 h-6" />}
                 title="Database"
                 techStack="MongoDB"
                 note="Designing and implementing efficient database schemas and queries for optimal data management."
             />
             <Item
-                image={<PanelsTopLeft />}
-                title="UX/UI Design"
+                image={<Smartphone  className="text-pink-500 w-6 h-6" />}
+                title="UX/UI & Responsive Design"
                 techStack="CSS, Tailwind CSS"
                 note="Crafting beautiful and intuitive user interfaces with modern design principles and frameworks."
             />
             <Item
-                image={<GitBranch />}
+                image={<GitBranch  className="text-orange-500 w-6 h-6" />}
                 title="Version Control"
                 techStack="Git, Github"
                 note="Managing code versions efficiently with Git and collaborating effectively through GitHub."
             />
             <Item
-                image={<Globe />}
+                image={<Globe  className="text-red-500 w-6 h-6" />}
                 title="Web Performance"
-                techStack="Git, Github"
+                techStack="SEO, Optimization"
                 note="Optimizing web applications for speed, accessibility, and search engine visibility."
             />
         </div>

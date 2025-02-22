@@ -10,7 +10,7 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ image, title, techStack, note }) => {
     return (
-        <div className='bg-white mt-10 p-5 rounded flex flex-col gap-4'>
+        <div className='bg-white p-5 rounded flex flex-col gap-4'>
             <div className="flex items-center justify-left gap-4">
                 <div className="block p-2 rounded-full bg-white shadow-md">
                     <span className="dark:bg-gray-800 shadow-lg">{image}</span>
@@ -29,7 +29,7 @@ const Item: React.FC<ItemProps> = ({ image, title, techStack, note }) => {
 
 const Stack = () => {
     return (
-        <div>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Item
                 image={<Code className="text-blue-500 w-6 h-6"/>}
                 title="Languages"

@@ -1,12 +1,10 @@
 "use client";
-import { Github } from "lucide-react";
-import { Radio } from "lucide-react";
 
 interface itemProps {
   bgImage: React.ReactNode;
   name: string;
-  details: string; // Keep this as an array
-  stack: string[]; // Updated to an array to match the implementation
+  details: string;
+  stack: string[];
   code: React.ReactNode;
   preview: React.ReactNode;
 }
@@ -17,25 +15,30 @@ const Projects: React.FC<itemProps> = ({
   details,
   stack,
   code,
-  preview
+  preview,
 }) => {
   return (
-    <div className="bg-green-400">
-      <div>{bgImage}</div>
-      <div>
-        <h4>{name}</h4>
+    <div className="mt-10 bg-white pb-1 border-2 border-black-900 border-solid">
+      <div className="border-b-2">{bgImage}</div>
+      <div className="text-left m-5">
+        <h4 className="font-bold text-md mb-3">{name}</h4>
         <p>{details}</p>
       </div>
-      <div>
-        <ul>
+      <div className="m-5">
+        <ul className="flex flex-row gap-4">
           {stack.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li
+              key={index}
+              className="px-2 bg-gray-200 border-red-400 rounded"
+            >
+              {item}
+            </li>
           ))}
         </ul>
       </div>
-      <div>
-        <span>{code}</span>
-        <span>{preview}</span>
+      <div className="flex flex-row gap-4 items-center m-5">
+        <a className="flex flex-row">{code}Code</a>
+        <a className="flex flex-row">{preview}Live Preview</a>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
       <>
-      <header className="z-40 bg-black-900 backdrop-blur-lg w-full h-[auto] fixed top-0 left-0 right-0">
+      <header className="z-40 bg-black w-full h-[auto] fixed top-0 left-0 right-0">
         <Header />
       </header>
       <main className="">

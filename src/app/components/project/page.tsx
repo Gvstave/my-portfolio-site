@@ -1,59 +1,56 @@
-import { Github, Radio } from "lucide-react";
+import Card from "../card/page";
 
-interface itemProps {
-  bgImage: React.ReactNode;
-  name: string;
-  details: string;
-  stack: string[];
-  codeUrl: string; 
-  pageUrl: string;
-}
-
-const Projects: React.FC<itemProps> = ({
-  bgImage,
-  name,
-  details,
-  stack,
-  codeUrl,
-  pageUrl,
-}) => {
+const Projects = () => {
   return (
-    <div className="text-gray-200 mt-10 bg-[#000] border-2 border-gray-800 shadow-lg shadow-[#111] rounded-lg">
-      <div>{bgImage}</div>
-      <div className="flex flex-col gap-5 p-5">
-        <div className="text-left">
-          <h4 className="font-bold text-lg text-white">{name}</h4>
-          <p>{details}</p>
-        </div>
-        <div>
-          <ul className="flex flex-row gap-4">
-            {stack.map((item, index) => (
-              <li key={index} className="px-2 border-2 border-gray-800 rounded">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex flex-row gap-8 items-center text-green-500">
-          <a
-            href={codeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-row gap-1 hover:text-green-600"
-          >
-            <Github /> Code
-          </a>
-          <a
-            href={pageUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-row gap-1 hover:text-green-600"
-          >
-            <Radio /> Live Preview
-          </a>
-        </div>
+    <>
+      <div>
+        <h4 className="text-2xl md:text-3xl lg:text-3xl font-bold mt-10">
+          Projects
+        </h4>
       </div>
-    </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card
+          bgImage={<img src="images/portfolio.png" alt="flags demo images" />}
+          name="My Portfolio"
+          details="My portfolio is built with TypeScript, Next.js, Framer Motion, and Tailwind CSS. It features a sleek, responsive design with smooth animations, showcasing my skills in modern web development and offering a seamless user experience."
+          stack={["NextTs", "Typescript", "Tailwind CSS", "Framer-motion"]}
+          pageUrl=""
+          codeUrl=""
+        />
+        <Card
+          bgImage={<img src="images/flags.png" alt="flags demo images" />}
+          name="Flags Of The World"
+          details="Flags Of The World is a project created as part of a challenge hosted by Tech-Mentor. The page displays detailed information about countries, allowing users to filter countries by continent, search for specific countries, and click on flags to view more details. "
+          stack={["HTML", "CSS", "JavaScript"]}
+          pageUrl="https://gvstave.github.io/flagsOfTheWorld/"
+          codeUrl="https://github.com/Gvstave/flagsOfTheWorld"
+        />
+        <Card
+          bgImage={<img src="images/currency.png" alt="flags demo images" />}
+          name="Currency Converter"
+          details="Currency Converter offers a real-time currency conversion tool with an intuitive interface, providing accurate exchange rates and a seamless user experience."
+          stack={["HTML", "CSS", "JavaScript"]}
+          pageUrl="https://gvstave.github.io/Currency-converter/"
+          codeUrl="https://github.com/Gvstave/Currency-converter"
+        />
+        <Card
+          bgImage={<img src="images/covers.png" />}
+          name="Seat Covers"
+          details="Seat Covers Site showcases a product catalog with detailed descriptions and images, providing a smooth browsing experience"
+          stack={["HTML", "CSS", "Javascript"]}
+          pageUrl="https://gvstave.github.io/Seat-Covers-Site/"
+          codeUrl="https://github.com/Gvstave/Seat-Covers-Site"
+        />
+        <Card
+          bgImage={<img src="images/editor.png" />}
+          name="Minix Text Editor"
+          details="Minix Text Editor is a text editor that allows users to write and edit content in HTML and CSS formats. Users can also save their work as a PDF, making it a versatile tool for creating and exporting styled content. "
+          stack={["HTML", "CSS", "Javascript"]}
+          pageUrl="https://github.com/Gvstave/minix_text_editor_renovated"
+          codeUrl="https://github.com/Gvstave/minix_text_editor_renovated"
+        />
+      </div>
+    </>
   );
 };
 

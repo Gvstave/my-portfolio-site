@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Contribute from '@/app/components/contribute/page';
-import Projects from '@/app/components/project/page';
-import { WorkContent } from '@/app/components/content/page';
+import Contribute from '@/app/components/Contribute';
+import Projects from '@/app/components/Projects';
+import { WorkContent } from '@/app/components/Content';
 
 const Works = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,8 +1,8 @@
 "use client";
-import Icons from "@/app/components/icons/page";
-import Button from "@/app/components/button/page";
-import { IntroductionContent } from "@/app/components/content/page";
-import Hero from "@/app/components/hero/page";
+import Icons from "@/app/components/Icons";
+import Button from "@/app/components/Button";
+import { IntroductionContent } from "@/app/components/Content";
+import Hero from "@/app/components/Hero";
 import { motion } from "framer-motion";
 
 const Container = () => {

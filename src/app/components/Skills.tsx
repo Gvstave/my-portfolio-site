@@ -1,5 +1,5 @@
 import { Server, Database, Code, Smartphone, GitBranch, Globe, PanelsTopLeft } from "lucide-react";
-import Item from "../item/page";
+import Item from "./Item";
 
 const Skills = () => {
     return (

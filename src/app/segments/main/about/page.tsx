@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Skills from "@/app/components/skills/page";
-import { AboutContent } from "@/app/components/content/page";
+import Skills from "@/app/components/Skills";
+import { AboutContent } from "@/app/components/Content";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);

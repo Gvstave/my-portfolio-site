@@ -1,5 +1,5 @@
-import Card from "../card/page";
-
+import Card from "./Card";
+import Image from "next/image";
 const Projects = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const Projects = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <Card
-          bgImage={<img src="images/portfolio.png" alt="flags demo images" />}
+          bgImage={<Image alt="project image here" src="images/portfolio.png" />}
           name="My Portfolio"
           details="My portfolio is built with TypeScript, Next.js, Framer Motion, and Tailwind CSS. It features a sleek, responsive design with smooth animations, showcasing my skills in modern web development and offering a seamless user experience."
           stack={["NextTs", "Typescript", "Tailwind CSS", "Framer-motion"]}
@@ -18,7 +18,7 @@ const Projects = () => {
           codeUrl=""
         />
         <Card
-          bgImage={<img src="images/flags.png" alt="flags demo images" />}
+          bgImage={<Image alt="project image here" src="images/flags.png" />}
           name="Flags Of The World"
           details="Flags Of The World is a project created as part of a challenge hosted by Tech-Mentor. The page displays detailed information about countries, allowing users to filter countries by continent, search for specific countries, and click on flags to view more details. "
           stack={["HTML", "CSS", "JavaScript"]}
@@ -26,7 +26,7 @@ const Projects = () => {
           codeUrl="https://github.com/Gvstave/flagsOfTheWorld"
         />
         <Card
-          bgImage={<img src="images/currency.png" alt="flags demo images" />}
+          bgImage={<Image alt="project image here" src="images/currency.png" />}
           name="Currency Converter"
           details="Currency Converter offers a real-time currency conversion tool with an intuitive interface, providing accurate exchange rates and a seamless user experience."
           stack={["HTML", "CSS", "JavaScript"]}
@@ -34,7 +34,7 @@ const Projects = () => {
           codeUrl="https://github.com/Gvstave/Currency-converter"
         />
         <Card
-          bgImage={<img src="images/covers.png" />}
+          bgImage={<Image alt="project image here" src="images/covers.png" />}
           name="Seat Covers"
           details="Seat Covers Site showcases a product catalog with detailed descriptions and images, providing a smooth browsing experience"
           stack={["HTML", "CSS", "Javascript"]}
@@ -42,7 +42,7 @@ const Projects = () => {
           codeUrl="https://github.com/Gvstave/Seat-Covers-Site"
         />
         <Card
-          bgImage={<img src="images/editor.png" />}
+          bgImage={<Image alt="project image here" src="images/editor.png" />}
           name="Minix Text Editor"
           details="Minix Text Editor is a text editor that allows users to write and edit content in HTML and CSS formats. Users can also save their work as a PDF, making it a versatile tool for creating and exporting styled content. "
           stack={["HTML", "CSS", "Javascript"]}

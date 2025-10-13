@@ -76,7 +76,7 @@ export const projectsContent = [
   {
     number: '04',
     title: 'Weather Dashboard',
-    technologies: 'Vue.js, Express.js, Weather API',
+    technologies: 'React, Express.js, Weather API',
     description: 'A responsive weather dashboard that displays current conditions, forecasts, and weather maps for multiple locations.',
     liveUrl: '#',
     githubUrl: '#'

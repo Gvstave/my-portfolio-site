@@ -8,6 +8,7 @@ interface FormData {
     name: string;
     email: string;
     message: string;
+    [key: string]: string;
 }
 
 interface FormErrors {

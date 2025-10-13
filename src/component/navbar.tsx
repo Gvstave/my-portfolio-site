@@ -1,17 +1,75 @@
 import { motion } from "framer-motion";
-import {ThemeButton} from "./ui/theme";
+import { ThemeButton } from "./ui/theme";
+import { MobileMenu } from "./ui/MobileMenu";
 
 const Navbar = () => {
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <motion.nav className="flex flex-row items-center justify-between h-[40px] w-[80%] min-md:max-w-3xl bg-blue-500 mx-auto my-0">
-            <ThemeButton className="w-16 h-full p-3 bg-black flex flex-row items-center justify-between rounded-[40px]" />
-            <div className="flex items-center gap-2 w-auto h-full bg-red-500 text-sm font-semibold px-3 rounded-[40px]">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skillset</a>
-                <a href="#">Experience</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
+        <motion.nav 
+            className="flex flex-row items-center justify-between h-[50px] w-[90%] max-w-6xl backdrop-blur-md mx-auto my-0 rounded-full border-theme"
+            style={{
+                backgroundColor: 'var(--card-bg)',
+                backdropFilter: 'blur(12px)',
+                borderColor: 'var(--border)'
+            }}
+        >
+            <ThemeButton className="w-12 h-8 ml-3 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" />
+            
+            {/* Desktop Menu */}
+            <div className="flex items-center gap-6 w-auto h-full text-theme-primary text-sm font-medium px-6 max-md:hidden">
+                <button 
+                    onClick={() => scrollToSection('home')} 
+                    className="transition-colors hover:opacity-75"
+                    style={{ color: 'var(--text-primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                >Home</button>
+                <button 
+                    onClick={() => scrollToSection('about')} 
+                    className="transition-colors hover:opacity-75"
+                    style={{ color: 'var(--text-primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                >About</button>
+                <button 
+                    onClick={() => scrollToSection('skillset')} 
+                    className="transition-colors hover:opacity-75"
+                    style={{ color: 'var(--text-primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                >Skills</button>
+                <button 
+                    onClick={() => scrollToSection('experience')} 
+                    className="transition-colors hover:opacity-75"
+                    style={{ color: 'var(--text-primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                >Experience</button>
+                <button 
+                    onClick={() => scrollToSection('projects')} 
+                    className="transition-colors hover:opacity-75"
+                    style={{ color: 'var(--text-primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                >Projects</button>
+                <button 
+                    onClick={() => scrollToSection('contact')} 
+                    className="transition-colors hover:opacity-75"
+                    style={{ color: 'var(--text-primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-primary)'}
+                >Contact</button>
+            </div>
+
+            {/* Mobile Menu */}
+            <div className="mr-2">
+                <MobileMenu />
             </div>
         </motion.nav>
     )

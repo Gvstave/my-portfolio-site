@@ -38,7 +38,7 @@ export const experienceContent = [
     number: '01',
     company: 'Zako Financial Literacy',
     role: 'FullStack Developer intern',
-    description: 'I’ve worked on a wide variety of frontend and backend tools for zako over the past 6 months.'
+    description: 'I\'ve worked on a wide variety of frontend and backend tools for zako over the past 6 months.'
   },
   {
     number: '02',
@@ -46,4 +46,39 @@ export const experienceContent = [
     role: 'Web Developer',
     description: 'I designed and developed the app for safisha.'
   }
-]
+];
+
+export const projectsContent = [
+  {
+    number: '01',
+    title: 'Personal Portfolio Website',
+    technologies: 'React, TypeScript, Tailwind CSS, Framer Motion',
+    description: 'A modern, responsive portfolio website featuring dark/light theme switching, smooth animations, and an intuitive user experience showcasing my skills and projects.',
+    liveUrl: 'https://gustave-portfolio-kv4bx5b6b-gustave-ilungas-projects.vercel.app',
+    githubUrl: 'https://github.com/Gvstave/my-portfolio-site'
+  },
+  {
+    number: '02',
+    title: 'E-Commerce Platform',
+    technologies: 'React, Node.js, MongoDB, Stripe',
+    description: 'A full-stack e-commerce solution with user authentication, payment processing, and inventory management.',
+    liveUrl: '#',
+    githubUrl: '#'
+  },
+  {
+    number: '03', 
+    title: 'Task Management App',
+    technologies: 'React, TypeScript, Firebase',
+    description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+    liveUrl: '#',
+    githubUrl: '#'
+  },
+  {
+    number: '04',
+    title: 'Weather Dashboard',
+    technologies: 'Vue.js, Express.js, Weather API',
+    description: 'A responsive weather dashboard that displays current conditions, forecasts, and weather maps for multiple locations.',
+    liveUrl: '#',
+    githubUrl: '#'
+  }
+];

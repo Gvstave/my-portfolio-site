@@ -1,15 +1,30 @@
+import { ProjectCard } from "../component/ui/cards/projectCard";
+import { projectsContent } from "../types/constants";
+
 export const Project = () => {
     return (
-        <div className="bg-[#000] px-[72px] pt-64 pb-32 max-md:px-[10px] max-md:py-5">
-            <div>
-                <h2 className="text-[#8491a0] mb-2 text-[16px] font-bold leading-[150%] ">My Projects</h2>
-                <h2 className="max-w-[780px] text-white text-[55px] leading-[110%] font-medium">Work that I’ve worked on for the past 3 years</h2>
+        <div id="projects" className="bg-theme-primary py-24 max-md:py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-theme-secondary mb-4 text-[16px] font-bold leading-[150%] uppercase tracking-wider">My Projects</h2>
+                    <h2 className="bg-green-500 text-theme-primary text-[48px] max-md:text-[36px] leading-[110%] font-medium max-w-4xl mx-auto">What I've worked on in the past 3 years</h2>
+                </div>
+                <div className="w-full grid md:grid-cols-2 mx-auto sm:grid-cols-1 gap-10">
+                    {
+                        projectsContent.map((project, index) => (
+                            <ProjectCard
+                                key={index}
+                                number={project.number}
+                                title={project.title}
+                                technologies={project.technologies}
+                                description={project.description}
+                                liveUrl={project.liveUrl}
+                                githubUrl={project.githubUrl}
+                            />
+                        ))
+                    }
+                </div>
             </div>
-            {/* <div className="flex max-lg:flex-col gap-10">
-                {
-                    experienceContent.map(item => <Card number={item.number} company={item.company} role={item.role} description={item.description} />)
-                }
-            </div> */}
         </div>
     )
-}
+};

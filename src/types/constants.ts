@@ -54,24 +54,24 @@ export const projectsContent = [
     title: 'Personal Portfolio Website',
     technologies: 'React, TypeScript, Tailwind CSS, Framer Motion',
     description: 'A modern, responsive portfolio website featuring dark/light theme switching, smooth animations, and an intuitive user experience showcasing my skills and projects.',
-    liveUrl: 'https://gustave-portfolio-kv4bx5b6b-gustave-ilungas-projects.vercel.app',
+    liveUrl: 'https://my-portfolio-site-4uu4.vercel.app/',
     githubUrl: 'https://github.com/Gvstave/my-portfolio-site'
   },
   {
     number: '02',
     title: 'E-Commerce Platform',
-    technologies: 'React, Node.js, MongoDB, Stripe',
+    technologies: 'React, Java(Springboot), PostgreSQL, Stripe',
     description: 'A full-stack e-commerce solution with user authentication, payment processing, and inventory management.',
-    liveUrl: '#',
-    githubUrl: '#'
+    liveUrl: 'https://open-market-two.vercel.app/',
+    githubUrl: 'https://github.com/Gvstave/OpenMarket'
   },
   {
     number: '03', 
-    title: 'Task Management App',
-    technologies: 'React, TypeScript, Firebase',
+    title: 'AI - Task Management System',
+    technologies: 'Next, Tailwind CSS, TypeScript, Firebase, Genkit AI',
     description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
     liveUrl: '#',
-    githubUrl: '#'
+    githubUrl: 'https://github.com/Gvstave/TMS-System'
   },
   {
     number: '04',

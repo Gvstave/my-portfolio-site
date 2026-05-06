@@ -3,11 +3,12 @@ import './index.css'
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ThemeProvider } from './contexts/ThemeContext.tsx';
-import { About } from './sections/about.tsx';
 import { Home } from './sections/home.tsx';
-import { Skillset } from './sections/skillset.tsx';
-import { Experience } from './sections/experience.tsx';
+import { About } from './sections/about.tsx';
 import { Project } from './sections/project.tsx';
+import { Skillset } from './sections/skillset.tsx';
+// import { Certificates } from './sections/certificates.tsx';
+import { Experience } from './sections/experience.tsx';
 import { Contact } from './sections/contact.tsx';
 import { Footer } from './component/footer.tsx';
 import { ScrollProgress } from './component/ui/ScrollProgress.tsx';
@@ -41,9 +42,10 @@ function App() {
               <ScrollProgress />
               <Home />
               <About />
-              <Experience />
-              <Skillset />
               <Project />
+              <Skillset />
+              {/* <Certificates /> */}
+              <Experience />
               <Contact />
               <Footer />
               <BackToTop />

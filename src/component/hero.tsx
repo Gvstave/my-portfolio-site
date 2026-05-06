@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
     return(
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20">
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 lg:gap-10">
                 {/* Desktop: Image on left, Tablet: Image visible, Mobile: Image hidden */}
                 <motion.div 
-                    className="hidden md:block w-full max-w-sm mx-auto lg:mx-0 lg:max-w-none lg:w-sm lg:flex-shrink-0 order-1 lg:order-1"
+                    className="hidden md:block w-full max-w-sm mx-auto lg:mx-0 lg:max-w-none lg:w-sm lg:shrink-0 order-1 lg:order-1"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}

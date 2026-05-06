@@ -32,7 +32,7 @@ export const Footer = () => {
                                 <button
                                     key={link}
                                     onClick={() => document.getElementById(link.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="block text-[var(--text-secondary)] transition-colors text-[16px] cursor-pointer hover:text-[var(--accent)]"
+                                    className="block text-(--text-secondary) transition-colors text-[16px] cursor-pointer hover:text-(--accent)"
                                 >
                                     {link}
                                 </button>

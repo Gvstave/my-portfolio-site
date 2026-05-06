@@ -9,11 +9,11 @@ export const ThemeButton: React.FC<ThemeProps> = ({className}) => {
 
     return (
         <button
-            className={`${className} relative overflow-hidden bg-white/10 backdrop-blur-sm`}
+            className={`${className} overflow-hidden bg-white/10 backdrop-blur-sm`}
             onClick={toggleTheme}
         >
             <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#5221e6] to-[#7c3aed] rounded-full"
+                className="absolute inset-0 bg-linear-to-r from-[#5221e6] to-[#7c3aed] rounded-full"
                 initial={false}
                 animate={{
                     scale: isDark ? 1 : 0,
@@ -26,7 +26,7 @@ export const ThemeButton: React.FC<ThemeProps> = ({className}) => {
                 }}
             />
             <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] rounded-full"
+                className="absolute inset-0 bg-linear-to-r from-[#fbbf24] to-[#f59e0b] rounded-full"
                 initial={false}
                 animate={{
                     scale: !isDark ? 1 : 0,

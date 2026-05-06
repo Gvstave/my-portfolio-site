@@ -8,9 +8,10 @@ export const MobileMenu = () => {
     const menuItems = [
         { name: "Home", id: "home" },
         { name: "About", id: "about" },
-        { name: "Experience", id: "experience" },
-        { name: "Skills", id: "skillset" },
         { name: "Projects", id: "projects" },
+        { name: "Skills", id: "skillset" },
+        // { name: "Certificates", id: "certificates" },
+        { name: "Experience", id: "experience" },
         { name: "Contact", id: "contact" },
     ];
 

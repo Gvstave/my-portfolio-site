@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 
+type Certificate = {
+    name: string;
+    issuer?: string;
+    date?: string;
+};
+
 export const Certificates = () => {
-    const certificatesList = [
+    const certificatesList: Certificate[] = [
         // Add your certificates here
     ];
 

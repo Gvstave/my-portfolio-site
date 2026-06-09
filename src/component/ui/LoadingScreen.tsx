@@ -10,8 +10,9 @@ export const LoadingScreen = () => {
             transition={{ duration: 0.8 }}
         >
             <div className="text-center">
-                <motion.div
+                <motion.div 
                     className="text-6xl font-bold text-theme-primary"
+                    style={{ color: 'var(--accent)' }}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.8, type: "spring", stiffness: 200 }}
@@ -19,16 +20,16 @@ export const LoadingScreen = () => {
                     GI
                 </motion.div>
                 
-                <motion.div
+                {/* <motion.div
                     className="w-24 h-1 mx-auto mb-4"
                     style={{ backgroundColor: 'var(--accent)' }}
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1.5, delay: 0.5 }}
-                />
+                /> */}
 
                 {/* Animated Dots */}
-                <div className="flex gap-1 justify-center mt-4">
+                <div className="flex gap-1 justify-center">
                     {[0, 1, 2].map((i) => (
                         <motion.div
                             key={i}

@@ -22,7 +22,7 @@ export const About = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <p className="text-theme-secondary text-[18px] leading-[150%] mb-6">
-                            I am an aspiring software engineer with a keen interest in full-stack web development and a deep passion for operating system (OS) research, design, and development.
+                            I am software engineer with a keen interest in full-stack web development and a deep passion for operating system (OS) research, design, and development.
                         </p>
                         <p className="text-theme-secondary text-[18px] leading-[150%]">
                             Throughout my academic journey, I have worked closely with colleagues on various projects, which has honed my experience in various fields of computer science.

@@ -34,7 +34,7 @@ export const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        A Software Engineer
+                        A Software Engineer {" "}
                     </motion.span>
                     <motion.span 
                         className="text-theme-muted"
